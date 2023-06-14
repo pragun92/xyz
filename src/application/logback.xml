@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+
+	<property name="XYZ_LOGS"
+		value="logs" />
+
+	<appender name="STDOUT-DEBUG" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} %-5level [%-36logger] [%M] - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="LOGFILE-DEBUG"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${XYZ_LOGS}/xyz_debug.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} %-5level [%-36logger] [%M] - %msg%n
+			</Pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>${XYZ_LOGS}/archived/xyz_debug.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>30</maxIndex>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+	</appender>
+	
+	<root level="DEBUG">
+		<appender-ref ref="LOGFILE-DEBUG" />
+		<appender-ref ref="STDOUT-DEBUG" />
+	</root>
+	
+</configuration>

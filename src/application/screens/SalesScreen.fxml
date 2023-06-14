@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SalesScreenController">
+   <children>
+      <Label layoutX="406.0" layoutY="21.0" text="Sales">
+         <font>
+            <Font name="Verdana Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="74.0" text="Search by employe">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbl_sales" layoutX="55.0" layoutY="115.0" prefHeight="284.0" prefWidth="825.0">
+        <columns>
+          <TableColumn fx:id="col_saleId" prefWidth="75.0" text="SalesID" />
+          <TableColumn fx:id="col_custFn" prefWidth="124.6666259765625" text="Customer Firstname" />
+            <TableColumn fx:id="col_custLn" prefWidth="124.6666259765625" text="Customer Lastname" />
+            <TableColumn fx:id="col_carMake" prefWidth="124.6666259765625" text="Car make" />
+            <TableColumn fx:id="col_carModel" prefWidth="124.6666259765625" text="Car model" />
+            <TableColumn fx:id="col_carPrice" prefWidth="124.6666259765625" text="Price" />
+            <TableColumn fx:id="col_username" prefWidth="124.6666259765625" text="Username" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_user" layoutX="206.0" layoutY="66.0" />
+   </children>
+</AnchorPane>
