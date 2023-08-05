@@ -18,8 +18,8 @@ import org.slf4j.LoggerFactory;
 import com.gluonhq.charm.glisten.control.TextField;
 
 import application.Main;
-import application.User;
 import application.handlers.DatabaseHandler;
+import application.model.User;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -67,7 +67,7 @@ public class LoginController {
 					Node  source = (Node)  e.getSource(); 
 					Stage stage1  = (Stage) source.getScene().getWindow();
 					stage1.close();
-					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/MainMenuScreen.fxml"));
+					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/screens/MainMenuScreen.fxml"));
 				    Parent root1 = (Parent) fxmlLoader.load();
 				    Stage stage2 = new Stage();
 				    stage2.setUserData(user);

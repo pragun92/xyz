@@ -8,9 +8,9 @@ import java.util.ResourceBundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import application.User;
 import application.handlers.DatabaseHandler;
 import application.model.Car;
+import application.model.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -63,14 +63,14 @@ public class MainMenuController implements Initializable{
 		user = new User();
 		lbl_Username.setText(user.getUsername());
 		bp.setCenter(null);
-		loadCenterScene("/application/CarFunctions.fxml");
+		loadCenterScene("/application/screens/CarFunctions.fxml");
 		
 	}
 	
 	@FXML
 	public void showCar(MouseEvent e) {
 		bp.setCenter(null);
-		loadCenterScene("/application/CarFunctions.fxml");
+		loadCenterScene("/application/screens/CarFunctions.fxml");
 		
 		
 	}

@@ -4,10 +4,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import application.User;
 import application.handlers.DatabaseHandler;
 import application.model.Car;
 import application.model.SalesRecord;
+import application.model.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;

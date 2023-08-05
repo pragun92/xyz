@@ -30,7 +30,7 @@
                   </Label>
                   <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Images/username.png" />
+                        <Image url="@../../../Images/username.png" />
                      </image>
                   </ImageView>
                   <Label fx:id="lbl_Username" layoutX="86.0" layoutY="20.0" prefHeight="23.0" prefWidth="99.0" text="User" textFill="#9a0027">

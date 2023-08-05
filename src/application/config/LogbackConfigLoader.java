@@ -32,7 +32,7 @@ public class LogbackConfigLoader {
 
 				LOGGER.info("logback.xml does not exist. Will create it");
 				InputStream wsdlInputStream = ClassLoader
-						.getSystemResourceAsStream("application/" + LOGBACK_CONFIG_FILE);
+						.getSystemResourceAsStream("application/config/" + LOGBACK_CONFIG_FILE);
 				byte[] buffer = new byte[wsdlInputStream.available()];
 				wsdlInputStream.read(buffer);
 				wsdlInputStream.close();

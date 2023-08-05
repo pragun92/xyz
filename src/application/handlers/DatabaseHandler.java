@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import application.User;
 import application.model.Car;
 import application.model.Customer;
 import application.model.Sale;
 import application.model.SalesRecord;
+import application.model.User;
 import application.utils.DatabaseConnection;
 
 public class DatabaseHandler {

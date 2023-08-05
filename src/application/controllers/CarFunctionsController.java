@@ -142,7 +142,7 @@ public class CarFunctionsController implements Initializable {
 
 	
 	public void openAddMenu(ActionEvent e) throws IOException {
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/AddCar.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/screens/AddCar.fxml"));
 	    Parent root1 = (Parent) fxmlLoader.load();
 	    Stage stage2 = new Stage();
 	    stage2.setScene(new Scene(root1, 400, 400)); 
@@ -168,7 +168,7 @@ public class CarFunctionsController implements Initializable {
 		Car selectedCar = tableView.getSelectionModel().getSelectedItem();
 		
 		if(null!=selectedCar) {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/CarDetails.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/screens/CarDetails.fxml"));
 		    Parent root1 = (Parent) fxmlLoader.load();
 		    Stage stage2 = new Stage();
 		    stage2.setUserData(selectedCar);

@@ -22,7 +22,7 @@ public class Main extends Application {
 		try {
 			new LogbackConfigLoader();
 			LOGGER.info("Starting application");
-			Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("./screens/LoginScreen.fxml"));
 			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setScene(new Scene(root, 520, 400));
 			primaryStage.show();
